@@ -128,4 +128,9 @@ body {
     margin: auto 20px;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   }
+
+  .keyboard-button {
+    font-size: 2rem;
+    padding: 0;
+  }
 }
