@@ -1,10 +1,12 @@
-function HangmanWord() {
-  const word = "test";
-  const guessedLetters = ["t", "s"];
+type HangmanWordProps = {
+  guessedLetters: string[];
+  wordToGuess: string;
+};
 
+function HangmanWord({ guessedLetters, wordToGuess }: HangmanWordProps) {
   return (
     <div className="word-wrapper">
-      {word.split("").map((letter, index) => (
+      {wordToGuess.split("").map((letter, index) => (
         <span className="word-letter" key={index}>
           <span
             style={{
