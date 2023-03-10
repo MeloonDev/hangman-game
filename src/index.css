@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  color: #000;
+}
+
+/*App*/
+.wrapper {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.score {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* HangmanDrawing */
+.hangman-wrapper {
+  position: relative;
+}
+
+.hangman-wrapper div {
+  background: #000;
+}
+
+/*HangmanWord*/
+.word-wrapper {
+  display: flex;
+  gap: 0.25em;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.word-letter {
+  border-bottom: 0.1em solid #000;
+}
+
+/*Keyboard*/
+.keyboard-wrapper {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 0.5rem;
+}
+
+.keyboard-button {
+  width: 100%;
+  border: 3px solid #000;
+  border-radius: 10px;
+  background: none;
+  aspect-ratio: 1/1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.keyboard-button.active {
+  background: #5ebd55;
+  color: #fff;
+}
+
+.keyboard-button.inactive {
+  opacity: 0.3;
+}
+
+.keyboard-button:hover:not(:disabled) {
+  background: #000;
+  color: #fff;
+}
